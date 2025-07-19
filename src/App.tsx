@@ -8,8 +8,8 @@ import Booking from './pages/Booking';
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
+    <Router basename='/website'>
+      <div className="min-h-screen flex flex-col bg-white">
         <Header />
         <main className="flex-grow">
           <Routes>

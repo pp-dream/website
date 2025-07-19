@@ -10,6 +10,7 @@ import {
   Star,
   TrendingUp
 } from 'lucide-react';
+import Container from '../components/Container';
 
 const More: React.FC = () => {
   const courses = [
@@ -132,10 +133,10 @@ const More: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               了解更多
@@ -144,12 +145,12 @@ const More: React.FC = () => {
               詳細的課程資訊、設施介紹，以及常見問題解答
             </p>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Courses Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               課程方案
@@ -198,12 +199,12 @@ const More: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Facilities Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               場地設施
@@ -215,7 +216,7 @@ const More: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {facilities.map((facility, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="flex flex-col items-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600">
                   {facility.icon}
                 </div>
@@ -224,12 +225,12 @@ const More: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Schedule Section */}
       <section className="py-20 bg-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               上課時間表
@@ -264,12 +265,12 @@ const More: React.FC = () => {
               </table>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               常見問題
@@ -292,12 +293,12 @@ const More: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Video Section */}
       <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               教學影片
@@ -328,7 +329,7 @@ const More: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
     </div>
   );

@@ -10,6 +10,7 @@ import {
   MapPin,
   DollarSign
 } from 'lucide-react';
+import Container from '../components/Container';
 
 const Booking: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -79,7 +80,7 @@ const Booking: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen pt-20 bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center">
         <div className="max-w-md mx-auto text-center p-8">
           <div className="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-green-600" />
@@ -97,10 +98,10 @@ const Booking: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen pt-20 bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               預約課程
@@ -109,10 +110,10 @@ const Booking: React.FC = () => {
               填寫下方表單，開始您的桌球學習之旅
             </p>
           </div>
-        </div>
+        </Container>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <Container className="py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Information */}
           <div className="lg:col-span-1">
@@ -354,7 +355,7 @@ const Booking: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

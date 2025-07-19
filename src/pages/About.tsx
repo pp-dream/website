@@ -9,6 +9,7 @@ import {
   Mail,
   Phone
 } from 'lucide-react';
+import Container from '../components/Container';
 
 const About: React.FC = () => {
   const coaches = [
@@ -33,7 +34,7 @@ const About: React.FC = () => {
       id: 2,
       name: "李美玲",
       title: "資深教練",
-      image: "https://images.unsplash.com/photo-1594736797933-d0c6119fcbf3?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
       experience: "10年教學經驗",
       specialties: ["青少年訓練", "女子組指導", "基礎教學"],
       achievements: [
@@ -73,10 +74,10 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               專業教練團隊
@@ -86,12 +87,12 @@ const About: React.FC = () => {
               致力於為每位學員提供最專業的桌球指導
             </p>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Team Stats */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {teamStats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -103,12 +104,12 @@ const About: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Coaches Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               認識我們的教練
@@ -215,12 +216,12 @@ const About: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Teaching Philosophy Section */}
       <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               我們的教學理念
@@ -255,7 +256,7 @@ const About: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     </div>
   );

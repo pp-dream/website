@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, User, Phone } from 'lucide-react';
+import Container from './Container';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container>
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 text-2xl font-bold">
@@ -93,7 +94,7 @@ const Header: React.FC = () => {
             </nav>
           </div>
         )}
-      </div>
+      </Container>
     </header>
   );
 };

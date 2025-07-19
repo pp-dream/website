@@ -10,6 +10,7 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
+import Container from '../components/Container';
 
 const Home: React.FC = () => {
   const features = [
@@ -67,7 +68,7 @@ const Home: React.FC = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -112,12 +113,12 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               為什麼選擇我們？
@@ -137,12 +138,12 @@ const Home: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Achievements Section */}
       <section className="py-16 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center">
@@ -153,12 +154,12 @@ const Home: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Testimonials Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               學員真實回饋
@@ -183,16 +184,16 @@ const Home: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-500 to-red-500 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <Container className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             準備好開始您的桌球之旅了嗎？
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 max-w-2xl mx-auto w-full">
             立即預約免費試課，讓我們專業的教練為您評估並規劃最適合的學習路徑
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -210,7 +211,7 @@ const Home: React.FC = () => {
               認識我們的教練
             </Link>
           </div>
-        </div>
+        </Container>
       </section>
     </div>
   );

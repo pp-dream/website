@@ -9,6 +9,11 @@ export default {
       fontFamily: {
         'sans': ['Noto Sans TC', 'system-ui', 'sans-serif'],
       },
+      maxWidth: {
+        'container': '1280px',
+        'container-sm': '1024px',
+        'container-lg': '1536px',
+      },
       colors: {
         primary: {
           50: '#eff6ff',
@@ -57,5 +62,56 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.container-center': {
+          'max-width': '1280px',
+          'margin-left': 'auto',
+          'margin-right': 'auto',
+          'padding-left': '1rem',
+          'padding-right': '1rem',
+          '@media (min-width: 640px)': {
+            'padding-left': '1.5rem',
+            'padding-right': '1.5rem',
+          },
+          '@media (min-width: 1024px)': {
+            'padding-left': '2rem',
+            'padding-right': '2rem',
+          },
+        },
+        '.container-center-wide': {
+          'max-width': '1536px',
+          'margin-left': 'auto',
+          'margin-right': 'auto',
+          'padding-left': '1rem',
+          'padding-right': '1rem',
+          '@media (min-width: 640px)': {
+            'padding-left': '1.5rem',
+            'padding-right': '1.5rem',
+          },
+          '@media (min-width: 1024px)': {
+            'padding-left': '2rem',
+            'padding-right': '2rem',
+          },
+        },
+        '.container-center-narrow': {
+          'max-width': '1024px',
+          'margin-left': 'auto',
+          'margin-right': 'auto',
+          'padding-left': '1rem',
+          'padding-right': '1rem',
+          '@media (min-width: 640px)': {
+            'padding-left': '1.5rem',
+            'padding-right': '1.5rem',
+          },
+          '@media (min-width: 1024px)': {
+            'padding-left': '2rem',
+            'padding-right': '2rem',
+          },
+        }
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 }
