@@ -124,7 +124,7 @@ const Home: React.FC = () => {
               為什麼選擇我們？
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              我們提供最專業的桌球教學服務，讓每位學員都能在最短時間內看到明顯進步
+              我們提供最專業有成效的教學品質，讓每位學員都能以快樂的心用最少的時間感受差異
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -194,7 +194,7 @@ const Home: React.FC = () => {
             準備好開始您的桌球之旅了嗎？
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto w-full">
-            立即預約免費試課，讓我們專業的教練為您評估並規劃最適合的學習路徑
+            立即預約課程體驗，讓我們專業的教練為您評估並規劃最適合的學習路徑
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -202,7 +202,7 @@ const Home: React.FC = () => {
               className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
             >
               <CheckCircle size={20} />
-              <span>免費試課預約</span>
+              <span>課程體驗預約</span>
             </Link>
             <Link
               to="/about"

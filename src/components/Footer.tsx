@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             </Link>
             <p className="text-gray-300 mb-4 max-w-md">
               專業桌球教學團隊，致力於提供最優質的桌球教學服務。
-              無論您是初學者還是進階選手，我們都能為您量身打造專屬的訓練計畫。
+              無論您是初學者或進階選手，我們都能為您量身打造專屬訓練計畫。
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
-              © 2025 夢想桌球教練. 版權所有.
+              © 2025 乒乓玩樂天堂. 版權所有.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0 gap-2">
               <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors">
