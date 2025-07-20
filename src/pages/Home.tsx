@@ -74,11 +74,11 @@ const Home: React.FC = () => {
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 成為
                 <span className="text-orange-400 animate-pulse">桌球高手</span>
-                的第一步
+                第一步
               </h1>
               <p className="text-xl mb-8 text-blue-100">
-                專業桌球教練團隊，提供個人化教學服務。
-                無論您是初學者或進階選手，我們都能助您達成桌球夢想！
+                專業桌球教練團隊，提供個人化教學菜單。
+                無論是初學者或進階選手，我們都能助達符合您所期望的成效！
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
