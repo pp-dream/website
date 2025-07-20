@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <div className="bg-blue-600 text-white rounded-full p-2">
                 <User size={24} />
               </div>
-              <span>夢想桌球教練</span>
+              <span>乒乓玩樂天堂</span>
             </Link>
             <p className="text-gray-300 mb-4 max-w-md">
               專業桌球教學團隊，致力於提供最優質的桌球教學服務。
