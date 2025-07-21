@@ -15,10 +15,10 @@ const About: React.FC = () => {
   const coaches = [
     {
       id: 1,
-      name: "陳志明",
-      title: "總教練",
+      name: "鯰魚教練",
+      title: "羅教練",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
-      experience: "15年教學經驗",
+      experience: "5年教學經驗",
       specialties: ["基礎教學", "技術指導", "競賽訓練"],
       achievements: [
         "前國家代表隊選手",
@@ -26,14 +26,14 @@ const About: React.FC = () => {
         "亞洲青年錦標賽銅牌",
         "國際教練認證資格"
       ],
-      description: "擁有豐富的競賽經驗和教學經驗，專精於基礎技術建立和進階戰術指導。曾培育多名學員獲得全國性比賽佳績，教學風格嚴謹而不失幽默。",
+      description: "擁有豐富的競賽經驗和教學經驗，專精於基礎技術建立和動作架構的指導。教學風格嚴謹而不失幽默。",
       email: "chen@dreamtt.com",
       phone: "0912-345-678"
     },
     {
       id: 2,
-      name: "李美玲",
-      title: "資深教練",
+      name: "大熊教練",
+      title: "顏教練",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
       experience: "10年教學經驗",
       specialties: ["青少年訓練", "女子組指導", "基礎教學"],
@@ -49,8 +49,8 @@ const About: React.FC = () => {
     },
     {
       id: 3,
-      name: "王大偉",
-      title: "競賽教練",
+      name: "大黑教練",
+      title: "陳教練",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
       experience: "8年教學經驗",
       specialties: ["競賽訓練", "戰術分析", "體能訓練"],
@@ -67,10 +67,10 @@ const About: React.FC = () => {
   ];
 
   const teamStats = [
-    { icon: <Trophy className="w-8 h-8 text-yellow-500" />, label: "獲獎次數", value: "50+" },
-    { icon: <Users className="w-8 h-8 text-blue-500" />, label: "培訓學員", value: "500+" },
-    { icon: <Calendar className="w-8 h-8 text-green-500" />, label: "教學年資", value: "15年" },
-    { icon: <GraduationCap className="w-8 h-8 text-purple-500" />, label: "專業認證", value: "10+" }
+    { icon: <Calendar className="w-8 h-8 text-yellow-500" />, label: "教學平均年資", value: "3年+" },
+    { icon: <Users className="w-8 h-8 text-blue-500" />, label: "滿意學員", value: "300+" },
+    { icon: <GraduationCap className="w-8 h-8 text-green-500" />, label: "整體滿意度", value: "95%" },
+    { icon: <GraduationCap className="w-8 h-8 text-purple-500" />, label: "學員推薦率", value: "97%" }
   ];
 
   return (
@@ -83,8 +83,8 @@ const About: React.FC = () => {
               專業教練團隊
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              我們的教練團隊擁有豐富的競賽經驗和教學資歷，
-              致力於為每位學員提供最專業的桌球指導
+              擁有豐富的競賽經驗和教學資歷，
+              致力於為每位學員提供最符合需求的桌球指導
             </p>
           </div>
         </Container>

@@ -127,7 +127,7 @@ const Booking: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">電話</p>
-                    <p className="text-gray-600">0912-345-678</p>
+                    <p className="text-gray-600">0989-519-838</p>
                   </div>
                 </div>
                 
@@ -137,7 +137,7 @@ const Booking: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
-                    <p className="text-gray-600">coach@dreamtt.com</p>
+                    <p className="text-gray-600">s38030588@yahoo.com.tw</p>
                   </div>
                 </div>
                 
@@ -146,19 +146,14 @@ const Booking: React.FC = () => {
                     <MapPin className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">地址</p>
-                    <p className="text-gray-600">台北市信義區體育館<br />桌球訓練中心</p>
+                    <p className="font-medium text-gray-900">官方Line@</p>
+                    <p className="text-gray-600">5678@</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
                   <div className="bg-blue-100 p-2 rounded-lg">
-                    <Clock className="w-5 h-5 text-blue-600" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-gray-900">營業時間</p>
-                    <p className="text-gray-600">週一至週五 18:00-21:00<br />週六日 09:00-17:00</p>
-                  </div>
+                 </div>
                 </div>
               </div>
 
@@ -168,7 +163,7 @@ const Booking: React.FC = () => {
                   <h4 className="font-semibold text-orange-900">特別優惠</h4>
                 </div>
                 <p className="text-orange-800 text-sm">
-                  首次預約享有免費試課！讓您先體驗我們的教學品質。
+                  搶先體驗課程！購課享有特別優惠。
                 </p>
               </div>
             </div>

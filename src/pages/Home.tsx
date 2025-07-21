@@ -31,26 +31,44 @@ const Home: React.FC = () => {
     },
     {
       icon: <Trophy className="w-8 h-8 text-blue-600" />,
-      title: "競賽指導",
-      description: "專業比賽訓練，助您在競賽中脫穎而出"
+      title: "價值保證",
+      description: "優質的教學品質，讓您感受到物超所值"
     }
   ];
 
   const testimonials = [
     {
-      name: "王小明",
+      name: "張○國",
       rating: 5,
       comment: "教練非常專業，教學方式生動有趣，我的球技進步很多！",
       course: "一對一初級課程"
     },
     {
-      name: "李美華",
+      name: "黃○志",
       rating: 5,
-      comment: "課程安排很棒，教練很有耐心，推薦給想學桌球的朋友！",
-      course: "團體進階課程"
+      comment: "孩子第一次接觸就愛上桌球，老師很有耐心也很專業！",
+      course: "一對一初級課程"
     },
     {
-      name: "張志偉",
+      name: "李○雅",
+      rating: 5,
+      comment: "上了中階課之後，孩子的動作越來越扎實，看得出進步!",
+      course: "一對一中級課程"
+    },
+    {
+      name: "陳○淑",
+      rating: 5,
+      comment: "孩子說上課很有趣又不會太難，學得開心也進步快!",
+      course: "一對一中級課程"
+    },
+    {
+      name: "吳○惠",
+      rating: 5,
+      comment: "課程安排很棒，教練很有耐心，推薦給想學桌球的朋友！",
+      course: "一對一高級課程"
+    },
+    {
+      name: "林○宏",
       rating: 5,
       comment: "專業的指導讓我在比賽中獲得好成績，非常感謝教練！",
       course: "競賽訓練課程"
@@ -58,10 +76,10 @@ const Home: React.FC = () => {
   ];
 
   const achievements = [
-    { number: "500+", label: "滿意學員" },
-    { number: "3年+", label: "教學經驗" },
-    { number: "98%", label: "學員推薦率" },
-    { number: "50+", label: "競賽獲獎" }
+    { number: "3年+", label: "教學平均年資" },
+    { number: "300+", label: "滿意學員" },
+    { number: "95%", label: "整體滿意度" },
+    { number: "97%", label: "學員推薦率" },
   ];
 
   return (
@@ -109,7 +127,7 @@ const Home: React.FC = () => {
               </div>
               {/* 浮動元素 */}
               <div className="absolute -top-4 -right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold animate-bounce">
-                免費試課！
+                預約體驗！
               </div>
             </div>
           </div>
