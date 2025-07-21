@@ -6,9 +6,7 @@ import {
   Trophy, 
   GraduationCap,
   Users,
-  Mail,
-  Phone
-} from 'lucide-react';
+  } from 'lucide-react';
 import Container from '../components/Container';
 
 const About: React.FC = () => {
