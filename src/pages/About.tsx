@@ -15,35 +15,28 @@ const About: React.FC = () => {
   const coaches = [
     {
       id: 1,
-      name: "鯰魚教練",
-      title: "羅教練",
+      name: "羅教練",
+      title: "鯰魚教練",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
       experience: "5年教學經驗",
-      specialties: ["基礎教學", "技術指導", "競賽訓練"],
+      specialties: ["基礎教學","兒少啟蒙培訓","心理素質與臨場應變","戰術強化與比賽模擬"],
       achievements: [
-        "前國家代表隊選手",
-        "全國桌球錦標賽冠軍",
-        "亞洲青年錦標賽銅牌",
-        "國際教練認證資格"
-      ],
-      description: "擁有豐富的競賽經驗和教學經驗，專精於基礎技術建立和動作架構的指導。教學風格嚴謹而不失幽默。",
-      email: "chen@dreamtt.com",
-      phone: "0912-345-678"
-    },
+        "我相信，每位學員都有獨特的學習節奏與風格，因此我主打「量身打造」的居家教學方案，讓學員在熟悉舒適的環境中，專注提升球技、享受學習的樂趣。",
+             ],
+      description: "具備豐富的比賽經驗及實戰背景，專精一對一個別指導。課程依照學員程度與目標量身打造，無論初學或進階，都能在家中舒適空間中，穩健提升技巧與戰術能力。",
+       },
     {
       id: 2,
-      name: "大熊教練",
-      title: "顏教練",
+      name: "顏教練",
+      title: "大熊教練",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      experience: "10年教學經驗",
-      specialties: ["青少年訓練", "女子組指導", "基礎教學"],
+      experience: "2年教學經驗",
+      specialties: ["基礎教學","初中高階技術指導","比賽戰術指導"],
+      
       achievements: [
-        "全國師範盃桌球賽冠軍",
-        "青少年組優秀教練獎",
-        "體育署認證教練",
-        "心理輔導師資格"
+        "大家好我是顏教練我很胖 但我深受家長喜歡 不要找羅教練 他很爛 我愛你們 謝謝"
       ],
-      description: "特別擅長青少年和女性學員的教學，注重學員心理建設和興趣培養。教學方式溫和耐心，深受學員和家長信賴。",
+      description: "注重動作型態，教學時擁有耐心及同理心，能透過溝通討論來了解學員不明白的部分，並加以修正，深受廣大家長喜愛。",
       email: "lee@dreamtt.com",
       phone: "0923-456-789"
     },
@@ -182,12 +175,11 @@ const About: React.FC = () => {
 
                     {/* Achievements */}
                     <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3">主要成就</h4>
+                      <h4 className="font-semibold text-gray-900 mb-3">教練想要送給學員的一段話：</h4>
                       <ul className="space-y-2">
                         {coach.achievements.map((achievement, i) => (
                           <li key={i} className="flex items-center text-gray-700">
-                            <Trophy className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                            <span>{achievement}</span>
+                                                       <span>{achievement}</span>
                           </li>
                         ))}
                       </ul>
@@ -195,20 +187,10 @@ const About: React.FC = () => {
 
                     {/* Contact */}
                     <div className="border-t pt-6">
-                      <h4 className="font-semibold text-gray-900 mb-3">聯絡方式</h4>
-                      <div className="space-y-2">
+                       <div className="space-y-2">
                         <div className="flex items-center text-gray-600">
-                          <Mail className="w-4 h-4 mr-2" />
-                          <a href={`mailto:${coach.email}`} className="hover:text-blue-600">
-                            {coach.email}
-                          </a>
-                        </div>
-                        <div className="flex items-center text-gray-600">
-                          <Phone className="w-4 h-4 mr-2" />
-                          <a href={`tel:${coach.phone}`} className="hover:text-blue-600">
-                            {coach.phone}
-                          </a>
-                        </div>
+                          
+                       </div>
                       </div>
                     </div>
                   </div>
