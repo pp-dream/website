@@ -5,8 +5,7 @@ import {
   Target,
   CheckCircle,
   PlayCircle,
-  Calendar,
-  Award,
+   Award,
   Star,
   TrendingUp
 } from 'lucide-react';
@@ -15,10 +14,9 @@ import Container from '../components/Container';
 const More: React.FC = () => {
   const courses = [
     {
-      title: "初學者課程",
-      duration: "4週",
-      price: "NT$ 3,200",
-      sessions: "8堂課",
+      title: "初階課程",
+      duration: "4.8.16週",
+        sessions: "4.8.16堂課",
       features: [
         "基本握拍姿勢",
         "發球技巧",
@@ -30,10 +28,9 @@ const More: React.FC = () => {
       color: "bg-green-500"
     },
     {
-      title: "進階課程",
-      duration: "6週",
-      price: "NT$ 5,400",
-      sessions: "12堂課",
+      title: "中階課程",
+      duration: "4.8.16週",
+      sessions: "4.8.16堂課",
       features: [
         "旋轉球技巧",
         "搓球與切球",
@@ -45,10 +42,9 @@ const More: React.FC = () => {
       color: "bg-blue-500"
     },
     {
-      title: "競賽訓練",
-      duration: "8週",
-      price: "NT$ 8,000",
-      sessions: "16堂課",
+      title: "高階課程",
+      duration: "4.8.16週",
+      sessions: "4.8.16堂課",
       features: [
         "高階技術訓練",
         "戰術分析",
@@ -56,58 +52,48 @@ const More: React.FC = () => {
         "體能訓練",
         "模擬比賽"
       ],
-      suitable: "有志參加比賽的學員",
+      suitable: "掌握初中階技巧想學習更高階技術或有志參加比賽的學員",
       color: "bg-purple-500"
     },
     {
-      title: "一對一指導",
+      title: "團體課程",
       duration: "彈性安排",
-      price: "NT$ 800/堂",
       sessions: "客製化",
       features: [
-        "個人化教學",
+        "歡迎社區包班",
         "靈活時間安排",
         "針對性指導",
-        "快速進步",
-        "專屬訓練計畫"
+        "團體生活學習",
+        "有趣不孤單"
       ],
-      suitable: "希望快速提升或有特定需求的學員",
+      suitable: "喜歡與同儕朋友一同練習及玩樂的孩童",
       color: "bg-orange-500"
     }
   ];
 
   const facilities = [
     {
-      title: "專業球桌",
-      description: "國際標準比賽用桌，提供最佳練習環境",
+      title: "專業教學",
+      description: "經驗豐富的教練團，提供最佳練習方式",
       icon: <Target className="w-8 h-8" />
     },
     {
-      title: "完善設備",
-      description: "專業球拍、練習球、球網等齊全設備",
+      title: "品質保證",
+      description: "教練團隊篩選嚴謹，不定時進修考察",
       icon: <Award className="w-8 h-8" />
     },
     {
-      title: "舒適環境",
-      description: "空調完善、光線充足的練習場地",
+      title: "滿分服務",
+      description: "確保學員得到一致的完善服務及教學",
       icon: <Star className="w-8 h-8" />
     },
     {
-      title: "停車便利",
-      description: "場館附設停車場，交通便利",
+      title: "反饋回應",
+      description: "教練與學員直接雙向溝通討論解決",
       icon: <MapPin className="w-8 h-8" />
     }
   ];
 
-  const schedule = [
-    { day: "週一", time: "18:00-21:00", type: "進階課程" },
-    { day: "週二", time: "19:00-21:00", type: "初學者課程" },
-    { day: "週三", time: "18:00-21:00", type: "一對一指導" },
-    { day: "週四", time: "19:00-21:00", type: "競賽訓練" },
-    { day: "週五", time: "18:00-21:00", type: "進階課程" },
-    { day: "週六", time: "09:00-17:00", type: "全日開放" },
-    { day: "週日", time: "09:00-17:00", type: "全日開放" }
-  ];
 
   const faq = [
     {
@@ -115,8 +101,8 @@ const More: React.FC = () => {
       answer: "當然可以！我們的初學者課程就是專為零基礎學員設計的，教練會從最基本的握拍開始教起，讓您循序漸進地學習。"
     },
     {
-      question: "課程是否提供球拍和球？",
-      answer: "是的，課程期間我們會提供練習用的球拍和球。如果您想要購買個人專屬球拍，我們也會根據您的程度和打法給予建議。"
+      question: "課程是否提供球拍？",
+      answer: "是的，課程期間我們會提供練習用的球拍。但正式課程開始後，建議購買個人專屬球拍，我們也會根據您的程度和打法給予建議。"
     },
     {
       question: "如果臨時有事無法上課怎麼辦？",
@@ -124,11 +110,11 @@ const More: React.FC = () => {
     },
     {
       question: "一個班級會有多少學員？",
-      answer: "為了確保教學品質，我們的團體課程每班最多6人。這樣教練可以給予每位學員充分的個別指導。"
+      answer: "為了確保教學品質，個人課每堂至多2人，團體課程每班至多4人。這樣教練可以給予每位學員充分的個別指導。"
     },
     {
       question: "課程結束後是否有進階選擇？",
-      answer: "有的！完成基礎課程後，您可以選擇進階課程、競賽訓練，或是一對一指導來持續提升技術水平。"
+      answer: "有的！完成基礎課程後，您可以選擇進階課程、競賽訓練來持續提升技術水平,且課程價格上並不會有所變動，但建議與教練討論程度後再做定奪。"
     }
   ];
 
@@ -142,7 +128,7 @@ const More: React.FC = () => {
               了解更多
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              詳細的課程資訊、設施介紹，以及常見問題解答
+              詳細的課程方案、課程內容，以及常見問題解答
             </p>
           </div>
         </Container>
@@ -165,8 +151,7 @@ const More: React.FC = () => {
               <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className={`${course.color} text-white p-6`}>
                   <h3 className="text-xl font-bold mb-2">{course.title}</h3>
-                  <div className="text-3xl font-bold mb-1">{course.price}</div>
-                  <div className="text-sm opacity-90">{course.sessions}</div>
+                                    <div className="text-sm opacity-90">{course.sessions}</div>
                 </div>
                 
                 <div className="p-6">
@@ -207,10 +192,10 @@ const More: React.FC = () => {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              場地設施
+              教學內容
             </h2>
             <p className="text-xl text-gray-600">
-              專業的設備與舒適的環境，讓您專心學習
+              以專業的技術搭配學員適合的學習方式讓您有效學習
             </p>
           </div>
 
@@ -228,45 +213,6 @@ const More: React.FC = () => {
         </Container>
       </section>
 
-      {/* Schedule Section */}
-      <section className="py-20 bg-blue-50">
-        <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              上課時間表
-            </h2>
-            <p className="text-xl text-gray-600">
-              彈性的時間安排，配合您的生活作息
-            </p>
-          </div>
-
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-blue-600 text-white">
-                  <tr>
-                    <th className="px-6 py-4 text-left font-semibold">星期</th>
-                    <th className="px-6 py-4 text-left font-semibold">時間</th>
-                    <th className="px-6 py-4 text-left font-semibold">課程類型</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {schedule.map((item, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                      <td className="px-6 py-4 font-medium text-gray-900">{item.day}</td>
-                      <td className="px-6 py-4 text-gray-700 flex items-center">
-                        <Calendar className="w-4 h-4 mr-2 text-blue-500" />
-                        {item.time}
-                      </td>
-                      <td className="px-6 py-4 text-gray-700">{item.type}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </Container>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">

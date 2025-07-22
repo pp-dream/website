@@ -147,7 +147,7 @@ const Booking: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">官方Line@</p>
-                    <p className="text-gray-600">5678@</p>
+                    <p className="text-gray-600">@845qnobd</p>
                   </div>
                 </div>
                 

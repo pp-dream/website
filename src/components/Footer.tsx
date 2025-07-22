@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <div className="bg-blue-600 text-white rounded-full p-2">
                 <User size={24} />
               </div>
-              <span>乒乓玩樂天堂</span>
+              <span>玩童桌球</span>
             </Link>
             <p className="text-gray-300 mb-4 max-w-md">
               專業桌球教學團隊，致力於提供最優質的桌球教學服務。
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin size={16} className="text-blue-400" />
-                <span className="text-gray-300">5678@</span>
+                <span className="text-gray-300">@845qnobd</span>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
-              © 2025 乒乓玩樂天堂. 版權所有.
+              © 2025 玩童桌球. 版權所有.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0 gap-2">
               <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors">

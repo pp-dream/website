@@ -25,7 +25,7 @@ const Header: React.FC = () => {
             <div className="bg-white text-blue-900 rounded-full p-2">
               <User size={24} />
             </div>
-            <span>乒乓玩樂天堂</span>
+            <span>玩童桌球</span>
           </Link>
 
           {/* Desktop Navigation */}

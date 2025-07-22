@@ -32,29 +32,34 @@ const About: React.FC = () => {
       specialties: ["基礎教學","初中高階技術指導","比賽戰術指導"],
       
       achievements: [
-        "大家好我是顏教練我很胖 但我深受家長喜歡 不要找羅教練 他很爛 我愛你們 謝謝"
+        "我希望每位學員在訓練時都能享受到打球的樂趣，在課程中我會去理解每位學員的個性，來加以調整訓練計畫，期望大家都能在快樂中學習！"
       ],
       description: "注重動作型態，教學時擁有耐心及同理心，能透過溝通討論來了解學員不明白的部分，並加以修正，深受廣大家長喜愛。",
-      email: "lee@dreamtt.com",
-      phone: "0923-456-789"
-    },
+          },
     {
       id: 3,
       name: "大黑教練",
       title: "陳教練",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      experience: "8年教學經驗",
-      specialties: ["競賽訓練", "戰術分析", "體能訓練"],
+      experience: "3年教學經驗",
+      specialties: ["基礎教學","競賽訓練","戰術分析","體能訓練"],
       achievements: [
-        "亞洲盃桌球賽參賽選手",
-        "全國大專盃雙打冠軍",
-        "運動科學碩士",
-        "體能訓練師認證"
+        "在練習過程中，我想陪著孩子在輕鬆歡樂的氛圍中學習，從遊戲中找到成就感，也一點一滴累積屬於自己的技巧與自信!"
       ],
-      description: "專精於競賽訓練和戰術分析，運用科學化訓練方法提升學員競技水平。對於有志參加比賽的學員提供專業指導。",
-      email: "wang@dreamtt.com",
-      phone: "0934-567-890"
-    }
+      description: "擁有豐富比賽實戰經驗，專精一對一客製化指導。課程融合娛樂與專業，依學員程度量身設計，在家也能輕鬆學、自在打，享受技巧與戰術的穩健成長。",
+         },
+         {
+      id: 4,
+      name: "小柯教練",
+      title: "柯教練",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      experience: "2年教學經驗",
+      specialties: ["基礎教學","親子桌球","身體協調","體能訓練","趣味桌球"],
+      achievements: [
+        "我希望用我的熱情，陪著孩子一起在快樂中進步，不只學會桌球技巧，更享受每一次練習的成就與笑容!"
+      ],
+      description: "年輕活力滿滿，熱愛與學生互動，用熱情點燃孩子對桌球的興趣。一對一教學結合遊戲與專項訓練，讓學習更有趣，也幫助孩子一步步累積信心與技巧。",
+         }
   ];
 
   const teamStats = [
@@ -231,7 +236,7 @@ const About: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">追求卓越</h3>
                 <p className="text-blue-100">
-                  不僅教授技術，更培養學員的運動精神和競爭力
+                  教授技術同時，培養學員運動家精神和競爭力及不放棄的堅持
                 </p>
               </div>
             </div>
