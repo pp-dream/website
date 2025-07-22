@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { User, Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
+import { User, Phone, Mail, MapPin, } from 'lucide-react';
 import Container from './Container';
 
 const Footer: React.FC = () => {
@@ -22,14 +22,12 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
-                <Facebook size={24} />
+               
               </a>
               <a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">
-                <Instagram size={24} />
-              </a>
+                              </a>
               <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
-                <Youtube size={24} />
-              </a>
+                             </a>
             </div>
           </div>
 

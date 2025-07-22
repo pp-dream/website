@@ -106,30 +106,28 @@ const Home: React.FC = () => {
                   <span>立即預約試課</span>
                   <ArrowRight size={20} className="animate-bounce-light" />
                 </Link>
-                <Link
-                  to="/more"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2"
-                >
-                  <PlayCircle size={20} />
-                  <span>觀看教學影片</span>
-                </Link>
-              </div>
+             </div>
             </div>
-            <div className="relative animate-slide-in">
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 transform hover:scale-105 transition-transform duration-300">
-                <div className="aspect-video bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center group cursor-pointer">
-                  <PlayCircle size={64} className="text-white group-hover:scale-110 transition-transform duration-200" />
-                </div>
-                <div className="mt-4 text-center">
-                  <p className="text-lg font-semibold">專業教學示範</p>
-                  <p className="text-blue-200">觀看我們的教學方法</p>
-                </div>
-              </div>
-              {/* 浮動元素 */}
-              <div className="absolute -top-4 -right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold animate-bounce">
-                預約體驗！
-              </div>
-            </div>
+           <a
+  href="https://www.youtube.com/watch?v=uGSjyoe41fo&t=7753s"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative animate-slide-in block"
+>
+  <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 transform hover:scale-105 transition-transform duration-300">
+    <div className="aspect-video bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center group cursor-pointer">
+      <PlayCircle size={64} className="text-white group-hover:scale-110 transition-transform duration-200" />
+    </div>
+    <div className="mt-4 text-center">
+      <p className="text-lg font-semibold">點選即觀看實際教學影片</p>
+      <p className="text-blue-200">觀看我們的教學方法</p>
+    </div>
+  </div>
+  {/* 浮動元素 */}
+  <div className="absolute -top-4 -right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold animate-bounce">
+    預約體驗！
+  </div>
+</a>
           </div>
         </Container>
       </section>

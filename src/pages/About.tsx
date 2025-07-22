@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
-  Award, 
-  Calendar, 
+   Calendar, 
   Star, 
   Trophy, 
   GraduationCap,
@@ -115,92 +114,62 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="space-y-16">
-            {coaches.map((coach, index) => (
-              <div 
-                key={coach.id} 
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                }`}
-              >
-                {/* Coach Image */}
-                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                  <div className="relative">
-                    <img
-                      src={coach.image}
-                      alt={coach.name}
-                      className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
-                    />
-                    <div className="absolute -bottom-6 -right-6 bg-orange-500 text-white p-4 rounded-full">
-                      <Award size={32} />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Coach Info */}
-                <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <div className="bg-white rounded-2xl p-8 shadow-lg">
-                    <div className="flex items-center mb-4">
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900">{coach.name}</h3>
-                        <p className="text-lg text-blue-600 font-semibold">{coach.title}</p>
-                      </div>
-                      <div className="ml-auto flex items-center text-yellow-500">
-                        <Star className="w-5 h-5 fill-current" />
-                        <Star className="w-5 h-5 fill-current" />
-                        <Star className="w-5 h-5 fill-current" />
-                        <Star className="w-5 h-5 fill-current" />
-                        <Star className="w-5 h-5 fill-current" />
-                      </div>
-                    </div>
-
-                    <div className="flex items-center text-gray-600 mb-4">
-                      <Calendar className="w-5 h-5 mr-2" />
-                      <span>{coach.experience}</span>
-                    </div>
-
-                    <p className="text-gray-700 mb-6">{coach.description}</p>
-
-                    {/* Specialties */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3">專長領域</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {coach.specialties.map((specialty, i) => (
-                          <span
-                            key={i}
-                            className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
-                          >
-                            {specialty}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Achievements */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3">教練想要送給學員的一段話：</h4>
-                      <ul className="space-y-2">
-                        {coach.achievements.map((achievement, i) => (
-                          <li key={i} className="flex items-center text-gray-700">
-                                                       <span>{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Contact */}
-                    <div className="border-t pt-6">
-                       <div className="space-y-2">
-                        <div className="flex items-center text-gray-600">
-                          
-                       </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <div></div>
+  <div className="space-y-12">
+  {Array.from({ length: Math.ceil(coaches.length / 2) }).map((_, rowIdx) => (
+    <div key={rowIdx} className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      {[0, 1].map(colIdx => {
+        const coach = coaches[rowIdx * 2 + colIdx];
+        if (!coach) return null;
+        return (
+          <div key={coach.id} className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="flex items-center mb-4">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900">{coach.name}</h3>
+                <p className="text-lg text-blue-600 font-semibold">{coach.title}</p>
               </div>
-            ))}
+              <div className="ml-auto flex items-center text-yellow-500">
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+                <Star className="w-5 h-5 fill-current" />
+              </div>
+            </div>
+            <div className="flex items-center text-gray-600 mb-4">
+              <Calendar className="w-5 h-5 mr-2" />
+              <span>{coach.experience}</span>
+            </div>
+            <p className="text-gray-700 mb-6">{coach.description}</p>
+            <div className="mb-6">
+              <h4 className="font-semibold text-gray-900 mb-3">專長領域</h4>
+              <div className="flex flex-wrap gap-2">
+                {coach.specialties.map((specialty, i) => (
+                  <span
+                    key={i}
+                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    {specialty}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="mb-6">
+              <h4 className="font-semibold text-gray-900 mb-3">教練想要送給學員的一段話：</h4>
+              <ul className="space-y-2">
+                {coach.achievements.map((achievement, i) => (
+                  <li key={i} className="flex items-center text-gray-700">
+                    <span>{achievement}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+        );
+      })}
+    </div>
+  ))}
+</div>
         </Container>
       </section>
 

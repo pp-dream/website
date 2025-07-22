@@ -27,11 +27,11 @@ const Booking: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const courses = [
-  { value: 'beginner', label: '初階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
-  { value: 'advanced', label: '中階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
-  { value: 'competition', label: '高階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
-  { value: 'private', label: '團體課程', description: '彈性安排' },
-  { value: 'trial', label: '體驗課程', description: '1堂體驗課' }
+  { value: 'beginner', label: '體驗課程', description: '1堂體驗課程'},
+  { value: 'advanced', label: '初階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
+  { value: 'competition', label: '中階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
+  { value: 'private', label: '高階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
+  { value: 'trial', label: '團體課程', description: '彈性安排' }
 ];
 
 
@@ -178,8 +178,8 @@ const handleSubmit = async (e: React.FormEvent) => {
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-3">
-                  <div className="bg-blue-100 p-2 rounded-lg">
+                <div className="">
+                  <div className="">
                  </div>
                 </div>
               </div>

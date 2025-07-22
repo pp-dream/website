@@ -4,11 +4,9 @@ import {
   MapPin, 
   Target,
   CheckCircle,
-  PlayCircle,
    Award,
   Star,
-  TrendingUp
-} from 'lucide-react';
+ } from 'lucide-react';
 import Container from '../components/Container';
 
 const More: React.FC = () => {
@@ -176,9 +174,8 @@ const More: React.FC = () => {
                     <p className="text-sm text-gray-600 mb-4">
                       <strong>適合對象：</strong>{course.suitable}
                     </p>
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200">
-                      選擇此方案
-                    </button>
+                    <button className="">
+                     </button>
                   </div>
                 </div>
               </div>
@@ -241,43 +238,7 @@ const More: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      {/* Video Section */}
-      <section className="py-20 bg-blue-900 text-white">
-        <Container>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              教學影片
-            </h2>
-            <p className="text-xl text-blue-100">
-              觀看我們的教學示範影片
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "基本握拍教學", duration: "5:30" },
-              { title: "正手攻球技巧", duration: "8:15" },
-              { title: "發球技術詳解", duration: "12:20" },
-              { title: "步法訓練", duration: "6:45" },
-              { title: "實戰對練", duration: "15:30" },
-              { title: "比賽戰術", duration: "10:10" }
-            ].map((video, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-200 cursor-pointer">
-                <div className="aspect-video bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center mb-4">
-                  <PlayCircle size={48} className="text-white" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{video.title}</h3>
-                <div className="flex items-center justify-between text-blue-200">
-                  <span className="text-sm">時長: {video.duration}</span>
-                  <TrendingUp className="w-4 h-4" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-    </div>
+        </div>
   );
 };
 
