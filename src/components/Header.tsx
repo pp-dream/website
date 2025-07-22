@@ -9,7 +9,7 @@ const Header: React.FC = () => {
 
   const navItems = [
     { path: '/', label: '首頁' },
-    { path: '/about', label: '人員介紹' },
+    { path: '/about', label: '師資陣容' },
     { path: '/more', label: '了解更多' },
     { path: '/booking', label: '點我預約' },
   ];
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
             <div className="bg-white text-blue-900 rounded-full p-2">
               <User size={24} />
             </div>
-            <span>玩童桌球</span>
+            <span>玩童桌球家教</span>
           </Link>
 
           {/* Desktop Navigation */}

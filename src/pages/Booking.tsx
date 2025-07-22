@@ -14,15 +14,16 @@ import Container from '../components/Container';
 
 const Booking: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    course: '',
-    date: '',
-    time: '',
-    experience: '',
-    message: ''
-  });
+  name: '',
+  phone: '',
+  email: '',
+  course: '',
+  date: '',
+  time: '',
+  experience: '',
+  message: '',
+  coach: '',
+});
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -44,7 +45,7 @@ const Booking: React.FC = () => {
 
   const experienceLevels = [
     { value: 'none', label: '完全沒有經驗' },
-    { value: 'beginner', label: '初學者' },
+    { value: 'beginner', label: '初階' },
     { value: 'intermediate', label: '中階' },
     { value: 'advanced', label: '進階' },
     { value: 'competitive', label: '競賽選手' }
@@ -101,6 +102,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       time: '',
       experience: '',
       message: '',
+      coach: '',
     });
   }, 3000);
 };
@@ -258,24 +260,46 @@ const handleSubmit = async (e: React.FormEvent) => {
 
                 {/* Course Selection */}
                 <div>
-                  <label htmlFor="course" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="course" className="block text-sm font-medium text-gray-700 mb-1">
                     課程選擇 *
                   </label>
                   <select
-                    id="course"
-                    name="course"
-                    required
-                    value={formData.course}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">請選擇課程</option>
-                    {courses.map((course) => (
-                      <option key={course.value} value={course.value}>
-                        {course.label} - {course.description}
-                      </option>
-                    ))}
-                  </select>
+  id="course"
+  name="course"
+  required
+  value={formData.course}
+  onChange={handleInputChange}
+  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent mb-8" // 原本 mb-6 改成 mb-8
+>
+  <option value="">請選擇課程</option>
+  {courses.map((course) => (
+    <option key={course.value} value={course.value}>
+      {course.label} - {course.description}
+    </option>
+  ))}
+</select>
+
+
+                    {/* 選擇教練欄位 */}
+<label className="block text-sm font-medium text-gray-700 mb-1">
+  選擇教練 *
+</label>
+<select
+  name="coach"
+  value={formData.coach}
+  onChange={handleInputChange}
+  className="w-full p-3 rounded-lg border border-gray-300 mb-6"
+  required
+>
+  <option value="">請選擇教練</option>
+  <option value="羅教練">羅教練-鯰魚教練</option>
+  <option value="顏教練">顏教練-大熊教練</option>
+  <option value="陳教練">陳教練-大黑教練</option>
+  <option value="柯教練">柯教練-小柯教練</option>
+  <option value="不指定">不指定</option>
+
+</select>
+                  
                 </div>
 
                 {/* Date and Time */}

@@ -16,29 +16,31 @@ const About: React.FC = () => {
       title: "鯰魚教練",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
       experience: "5年教學經驗",
-      specialties: ["基礎教學","兒少啟蒙培訓","心理素質與臨場應變","戰術強化與比賽模擬"],
+      specialties: ["基礎教學","初中高階技術指導","發球專項","兒少啟蒙培訓","心理素質與臨場應變","戰術強化與比賽模擬"],
       achievements: [
         "我相信，每位學員都有獨特的學習節奏與風格，因此我主打「量身打造」的居家教學方案，讓學員在熟悉舒適的環境中，專注提升球技、享受學習的樂趣。",
              ],
       description: "具備豐富的比賽經驗及實戰背景，專精一對一個別指導。課程依照學員程度與目標量身打造，無論初學或進階，都能在家中舒適空間中，穩健提升技巧與戰術能力。",
-       },
+      area:'鼓山區、左營區、鳥松區、三民區、仁武區、新興區',   
+    },
     {
       id: 2,
       name: "顏教練",
       title: "大熊教練",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
       experience: "2年教學經驗",
-      specialties: ["基礎教學","初中高階技術指導","比賽戰術指導"],
+      specialties: ["基礎教學","初中高階技術指導","比賽戰術指導","發球專項","親子桌球","趣味桌球","協調訓練"],
       
       achievements: [
         "我希望每位學員在訓練時都能享受到打球的樂趣，在課程中我會去理解每位學員的個性，來加以調整訓練計畫，期望大家都能在快樂中學習！"
       ],
       description: "注重動作型態，教學時擁有耐心及同理心，能透過溝通討論來了解學員不明白的部分，並加以修正，深受廣大家長喜愛。",
-          },
+      area:'鼓山區、前鎮區、鳳山區、苓雅區、三民區、新興區、前金區',    
+    },
     {
       id: 3,
-      name: "大黑教練",
-      title: "陳教練",
+      name: "陳教練",
+      title: "大黑教練",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
       experience: "3年教學經驗",
       specialties: ["基礎教學","競賽訓練","戰術分析","體能訓練"],
@@ -46,11 +48,12 @@ const About: React.FC = () => {
         "在練習過程中，我想陪著孩子在輕鬆歡樂的氛圍中學習，從遊戲中找到成就感，也一點一滴累積屬於自己的技巧與自信!"
       ],
       description: "擁有豐富比賽實戰經驗，專精一對一客製化指導。課程融合娛樂與專業，依學員程度量身設計，在家也能輕鬆學、自在打，享受技巧與戰術的穩健成長。",
-         },
+      area:'苓雅區、鳳山區、左營區、鳥松區、三民區',   
+    },
          {
       id: 4,
-      name: "小柯教練",
-      title: "柯教練",
+      name: "柯教練",
+      title: "小柯教練",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
       experience: "2年教學經驗",
       specialties: ["基礎教學","親子桌球","身體協調","體能訓練","趣味桌球"],
@@ -58,7 +61,8 @@ const About: React.FC = () => {
         "我希望用我的熱情，陪著孩子一起在快樂中進步，不只學會桌球技巧，更享受每一次練習的成就與笑容!"
       ],
       description: "年輕活力滿滿，熱愛與學生互動，用熱情點燃孩子對桌球的興趣。一對一教學結合遊戲與專項訓練，讓學習更有趣，也幫助孩子一步步累積信心與技巧。",
-         }
+      area:'苓雅區、鼓山區、三民區、左營區、前鎮區',   
+    }
   ];
 
   const teamStats = [
@@ -107,7 +111,7 @@ const About: React.FC = () => {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              認識我們的教練
+              認識『五星教練』
             </h2>
             <p className="text-xl text-gray-600">
               每位教練都有豐富的教學經驗和專業認證
@@ -127,6 +131,18 @@ const About: React.FC = () => {
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">{coach.name}</h3>
                 <p className="text-lg text-blue-600 font-semibold">{coach.title}</p>
+              <p className="text-gray-500 mb-4 flex flex-wrap gap-4">
+  <span className="font-semibold">授課區域：</span>
+  {coach.area.split('、').map((area, idx) => (
+    <span
+      key={idx}
+      className="bg-blue-50 text-blue-800 px-2 py-1 rounded-full text-xs font-medium"
+      style={{ minWidth: '60px' }}
+    >
+      {area}
+    </span>
+  ))}
+</p>
               </div>
               <div className="ml-auto flex items-center text-yellow-500">
                 <Star className="w-5 h-5 fill-current" />

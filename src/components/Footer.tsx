@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <div className="bg-blue-600 text-white rounded-full p-2">
                 <User size={24} />
               </div>
-              <span>玩童桌球</span>
+              <span>玩童桌球家教</span>
             </Link>
             <p className="text-gray-300 mb-4 max-w-md">
               專業桌球教學團隊，致力於提供最優質的桌球教學服務。
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                  人員介紹
+                  師資陣容
                 </Link>
               </li>
               <li>
@@ -81,16 +81,10 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
-              © 2025 玩童桌球. 版權所有.
+              © 2025 玩童桌球家教. 版權所有.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0 gap-2">
-              <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors">
-                隱私權政策
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors">
-                服務條款
-              </a>
-            </div>
+                                 </div>
           </div>
         </div>
       </Container>
