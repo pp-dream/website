@@ -27,24 +27,26 @@ const Booking: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const courses = [
-    { value: 'beginner', label: '初學者課程 (NT$ 3,200)', description: '4週8堂課' },
-    { value: 'advanced', label: '進階課程 (NT$ 5,400)', description: '6週12堂課' },
-    { value: 'competition', label: '競賽訓練 (NT$ 8,000)', description: '8週16堂課' },
-    { value: 'private', label: '一對一指導 (NT$ 800/堂)', description: '彈性安排' },
-    { value: 'trial', label: '免費試課', description: '1堂體驗課' }
-  ];
+  { value: 'beginner', label: '初階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
+  { value: 'advanced', label: '中階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
+  { value: 'competition', label: '高階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
+  { value: 'private', label: '團體課程', description: '彈性安排' },
+  { value: 'trial', label: '體驗課程', description: '1堂體驗課' }
+];
+
 
   const timeSlots = [
     '09:00-10:00', '10:00-11:00', '11:00-12:00',
     '14:00-15:00', '15:00-16:00', '16:00-17:00',
-    '18:00-19:00', '19:00-20:00', '20:00-21:00'
+    '18:00-19:00', '19:00-20:00', '20:00-21:00',
+    '其他時間'
   ];
 
   const experienceLevels = [
     { value: 'none', label: '完全沒有經驗' },
-    { value: 'beginner', label: '初學者（1-6個月）' },
-    { value: 'intermediate', label: '中級（6個月-2年）' },
-    { value: 'advanced', label: '進階（2年以上）' },
+    { value: 'beginner', label: '初學者' },
+    { value: 'intermediate', label: '中階' },
+    { value: 'advanced', label: '進階' },
     { value: 'competitive', label: '競賽選手' }
   ];
 
@@ -56,27 +58,52 @@ const Booking: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // 這裡會處理表單提交邏輯
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    
-    // 實際應用中，這裡會發送到後端API
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        course: '',
-        date: '',
-        time: '',
-        experience: '',
-        message: ''
-      });
-    }, 3000);
-  };
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch('https://formspree.io/f/xldljjzj', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        course: formData.course,
+        date: formData.date,
+        time: formData.time,
+        experience: formData.experience,
+        message: formData.message,
+      }),
+    });
+
+    if (response.ok) {
+      console.log('表單成功送出');
+    } else {
+      console.error('送出失敗');
+    }
+  } catch (error) {
+    console.error('發生錯誤', error);
+  }
+
+  setIsSubmitted(true);
+
+  setTimeout(() => {
+    setIsSubmitted(false);
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      course: '',
+      date: '',
+      time: '',
+      experience: '',
+      message: '',
+    });
+  }, 3000);
+};
 
   if (isSubmitted) {
     return (
@@ -90,7 +117,7 @@ const Booking: React.FC = () => {
             感謝您的預約，我們會在24小時內聯絡您確認上課時間和相關細節。
           </p>
           <p className="text-sm text-gray-500">
-            如有緊急問題，請直接撥打：0912-345-678
+            如有緊急問題，請直接撥打：0989-519-838
           </p>
         </div>
       </div>
