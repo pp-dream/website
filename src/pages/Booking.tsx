@@ -7,7 +7,7 @@ import {
   Mail, 
   MessageSquare,
   CheckCircle,
-  MapPin,
+  MessageCircleHeart,
   DollarSign
 } from 'lucide-react';
 import Container from '../components/Container';
@@ -152,7 +152,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="bg-blue-100 p-2 rounded-lg">
-                    <Phone className="w-5 h-5 text-blue-600" />
+                    <Phone className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">電話</p>
@@ -162,7 +162,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 
                 <div className="flex items-center space-x-3">
                   <div className="bg-blue-100 p-2 rounded-lg">
-                    <Mail className="w-5 h-5 text-blue-600" />
+                    <Mail className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
@@ -172,7 +172,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 
                 <div className="flex items-center space-x-3">
                   <div className="bg-blue-100 p-2 rounded-lg">
-                    <MapPin className="w-5 h-5 text-blue-600" />
+                    <MessageCircleHeart className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">官方Line@</p>

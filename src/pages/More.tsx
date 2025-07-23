@@ -1,10 +1,10 @@
 import React from 'react';
 import { 
   Clock, 
-  MapPin, 
   Target,
   CheckCircle,
-   Award,
+  MessageCircleCode,
+  Award,
   Star,
  } from 'lucide-react';
 import Container from '../components/Container';
@@ -88,7 +88,7 @@ const More: React.FC = () => {
     {
       title: "反饋回應",
       description: "教練與學員直接雙向溝通討論解決",
-      icon: <MapPin className="w-8 h-8" />
+      icon: <MessageCircleCode className="w-8 h-8" />
     }
   ];
 

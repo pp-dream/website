@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { User, Phone, Mail, MapPin, } from 'lucide-react';
+import { Medal, Phone, Mail,MessageCircleHeart  } from 'lucide-react';
 import Container from './Container';
 
 const Footer: React.FC = () => {
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 lg:col-span-2">
             <Link to="/" className="flex items-center space-x-2 text-2xl font-bold mb-4">
               <div className="bg-blue-600 text-white rounded-full p-2">
-                <User size={24} />
+                <Medal size={24} />
               </div>
               <span>玩童桌球家教</span>
             </Link>
@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
                 <span className="text-gray-300">s38030588@yahoo.com.tw</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin size={16} className="text-blue-400" />
+                <MessageCircleHeart size={16} className="text-blue-400" />
                 <span className="text-gray-300">@845qnobd</span>
               </div>
             </div>
