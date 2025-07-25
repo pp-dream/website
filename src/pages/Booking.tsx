@@ -28,7 +28,7 @@ const Booking: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const courses = [
-  { value: 'beginner', label: '體驗課程', description: '1堂體驗課程'},
+  { value: 'beginner', label: '體驗課程{限每人一堂}', description: '(50分鐘)/500元'},
   { value: 'advanced', label: '初階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
   { value: 'competition', label: '中階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
   { value: 'private', label: '高階課程', description: '4週4堂課，8週8堂課，16週16堂課' },

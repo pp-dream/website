@@ -11,12 +11,26 @@ import Container from '../components/Container';
 
 const More: React.FC = () => {
   const courses = [
+      {
+      title: "體驗課程/500元",
+      duration: "單堂/50mins",
+        sessions: "1堂",
+      features: [
+        "基本程度判別",
+        "握拍教學",
+        "反應及敏捷測試",
+        "趣味體驗活動",
+        "購拍方向建議"
+      ],
+      suitable: "初次與我們搭配合作的尊榮顧客們",
+      color: "bg-yellow-500"
+    },
     {
       title: "初階課程",
-      duration: "4.8.16週",
+      duration: "單堂/1hr",
         sessions: "4.8.16堂課",
       features: [
-        "基本握拍姿勢",
+        "握拍正反轉換",
         "發球技巧",
         "正手攻球",
         "反手推擋",
@@ -27,7 +41,7 @@ const More: React.FC = () => {
     },
     {
       title: "中階課程",
-      duration: "4.8.16週",
+      duration: "單堂/1hr",
       sessions: "4.8.16堂課",
       features: [
         "旋轉球技巧",
@@ -41,7 +55,7 @@ const More: React.FC = () => {
     },
     {
       title: "高階課程",
-      duration: "4.8.16週",
+      duration: "單堂/1hr",
       sessions: "4.8.16堂課",
       features: [
         "高階技術訓練",
@@ -55,7 +69,7 @@ const More: React.FC = () => {
     },
     {
       title: "團體課程",
-      duration: "彈性安排",
+      duration: "單堂/1.5hr",
       sessions: "客製化",
       features: [
         "社區包班",
@@ -144,7 +158,7 @@ const More: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 overflow-x-auto">
             {courses.map((course, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className={`${course.color} text-white p-6`}>
