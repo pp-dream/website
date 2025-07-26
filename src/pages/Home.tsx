@@ -109,7 +109,7 @@ const Home: React.FC = () => {
              </div>
             </div>
            <a
-  href="https://youtu.be/yfjyD4lY7YI"
+  href="https://youtu.be/4hua17U8vJY"
   target="_blank"
   rel="noopener noreferrer"
   className="relative animate-slide-in block"
