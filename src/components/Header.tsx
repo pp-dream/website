@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Medal, Phone } from 'lucide-react';
+import { Menu, X, Medal, Handshake } from 'lucide-react';
 import Container from './Container';
 
 const Header: React.FC = () => {
@@ -39,18 +39,18 @@ const Header: React.FC = () => {
     </Link>
   ))}
 </nav>
-
-                   {/* Contact Button */}
-          <div className="hidden md:flex items-center">
-            <Link
-              to="/booking"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2"
-            >
-              <Phone size={16} />
-              <span>立即預約</span>
-            </Link>
+<div className="hidden md:flex items-center">
+  <a
+    href="https://page.line.me/845qnobd"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2"
+  >
+              <Handshake size={16} />
+              <span>加入官方LINE</span>
+            </a>
           </div>
-
+    
           {/* Mobile menu button */}
           <button
             className="md:hidden"
@@ -83,7 +83,7 @@ const Header: React.FC = () => {
                 className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center space-x-2 w-fit"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <Phone size={16} />
+                <Handshake size={16} />
                 <span>立即預約</span>
               </Link>
             </nav>
