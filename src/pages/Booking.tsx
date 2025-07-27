@@ -365,7 +365,23 @@ const handleSubmit = async (e: React.FormEvent) => {
                     ))}
                   </select>
                 </div>
-
+{/* 推薦人欄位*/}
+<div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  推薦人《經核對推薦人填寫正確 您即享有專屬優惠》
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="您的推薦人是誰呢?"
+                  />
+                </div>
+        
                 {/* Message */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
