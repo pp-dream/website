@@ -66,23 +66,25 @@ const Header: React.FC = () => {
             <nav className="flex flex-col space-y-2">
              {navItems.map((item) =>
   item.path.startsWith("http") ? (
-    <a
-  href="https://page.line.me/845qnobd"
+   <a
+  href={item.path} // ✅ 使用 item.path 就能跟資料同步
   target="_blank"
   rel="noopener noreferrer"
   className="px-3 py-2 rounded-md text-sm text-white hover:bg-blue-600"
 >
-  加入官方LINE
+  {item.label}
 </a>
 
+
   ) : (
-    <Link
-      to={item.path}
-      key={item.path}
-      className="..."
-    >
-      {item.label}
-    </Link>
+  <Link
+  to={item.path}
+  key={item.path}
+  className="px-3 py-2 rounded-md text-sm text-white hover:bg-blue-600"
+>
+  {item.label}
+</Link>
+
   )
 )}
               <Link
