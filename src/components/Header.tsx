@@ -41,7 +41,7 @@ const Header: React.FC = () => {
 </nav>
 <div className="hidden md:flex items-center">
   <a
-    href="https://page.line.me/845qnobd"
+    href="https://page.line.me/845qnobd?v=2"
     target="_blank"
     rel="noopener noreferrer"
     className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2"
