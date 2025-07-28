@@ -87,14 +87,7 @@ const Header: React.FC = () => {
 
   )
 )}
-              <Link
-                to="/booking"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center space-x-2 w-fit"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <Handshake size={16} />
-                <span>立即預約</span>
-              </Link>
+              
             </nav>
           </div>
         )}
