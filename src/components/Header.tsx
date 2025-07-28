@@ -64,20 +64,27 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-blue-600">
             <nav className="flex flex-col space-y-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                    isActive(item.path)
-                      ? 'bg-white text-blue-900'
-                      : 'text-white hover:bg-blue-600'
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
+             {navItems.map((item) =>
+  item.path.startsWith("http") ? (
+    <a
+  href="https://page.line.me/845qnobd"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-3 py-2 rounded-md text-sm text-white hover:bg-blue-600"
+>
+  加入官方LINE
+</a>
+
+  ) : (
+    <Link
+      to={item.path}
+      key={item.path}
+      className="..."
+    >
+      {item.label}
+    </Link>
+  )
+)}
               <Link
                 to="/booking"
                 className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-md font-medium transition-colors duration-200 flex items-center space-x-2 w-fit"
