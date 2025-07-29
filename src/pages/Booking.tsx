@@ -292,7 +292,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   required
 >
   <option value="">請選擇教練</option>
-  <option value="羅教練">羅教練-鯰魚教練</option>
+  <option value="羅教練">羅教練-小羅教練</option>
   <option value="顏教練">顏教練-大熊教練</option>
   <option value="陳教練">陳教練-大黑教練</option>
   <option value="柯教練">柯教練-小柯教練</option>

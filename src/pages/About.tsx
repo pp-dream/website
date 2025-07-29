@@ -13,7 +13,7 @@ const About: React.FC = () => {
     {
       id: 1,
       name: "羅教練",
-      title: "鯰魚教練",
+      title: "小羅教練",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
       experience: "5年教學經驗",
       specialties: ["基礎教學","初中高階技術指導","發球專項","兒少啟蒙培訓","心理素質與臨場應變","戰術強化與比賽模擬"],
