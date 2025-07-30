@@ -23,6 +23,7 @@ const Booking: React.FC = () => {
   experience: '',
   message: '',
   coach: '',
+  referrer: '',
 });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -103,6 +104,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       experience: '',
       message: '',
       coach: '',
+      referrer: '',
     });
   }, 3000);
 };
@@ -370,16 +372,15 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                   推薦人《經核對推薦人填寫正確 您即享有專屬優惠》
                   </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="您的推薦人是誰呢?"
-                  />
+                 <input
+  type="text"
+  id="referrer"
+  name="referrer"
+  value={formData.referrer}
+  onChange={handleInputChange}
+  className="w-full px-4 py-3 border border-gray-300 rounded-md"
+  placeholder="您的推薦人是誰呢？"
+/>
                 </div>
         
                 {/* Message */}
