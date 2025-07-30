@@ -63,7 +63,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
   try {
-    const response = await fetch('https://formspree.io/f/xldljjzj', {
+    const response = await fetch('https://formspree.io/f/xzzvvdyr', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -201,7 +201,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           {/* Booking Form */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">預約表單</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">預約表單(歡迎使用官方LINE預約，更方便、更快速)</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Personal Information */}
