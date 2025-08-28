@@ -6,7 +6,6 @@ import {
   Target, 
   Clock, 
   Star, 
-  PlayCircle,
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
@@ -86,51 +85,29 @@ const Home: React.FC = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20 overflow-hidden">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                成為
-                <span className="text-orange-400 animate-pulse">桌球高手</span>
-                第一步
-              </h1>
-              <p className="text-xl mb-8 text-blue-100">
-                專業桌球教練團隊，提供個人化教學菜單。
-                無論是初學者或進階選手，我們都能助達符合您所期望的成效！
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/booking"
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2"
-                >
-                  <span>立即預約試課</span>
-                  <ArrowRight size={20} className="animate-bounce-light" />
-                </Link>
-             </div>
-            </div>
-           <a
-  href="https://youtu.be/4hua17U8vJY"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="relative animate-slide-in block"
->
-  <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 transform hover:scale-105 transition-transform duration-300">
-    <div className="aspect-video bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center group cursor-pointer">
-      <PlayCircle size={64} className="text-white group-hover:scale-110 transition-transform duration-200" />
+  <Container>
+    <div className="flex flex-col items-center justify-center text-center min-h-[400px]">
+      <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        成為
+        <span className="text-orange-400 animate-pulse">桌球高手</span>
+        第一步
+      </h1>
+      <p className="text-xl mb-8 text-blue-100">
+        專業桌球教練團隊，提供個人化教學菜單。
+        無論男女老少，初學者或進階選手，5-90歲我們都能助達符合您所期望的成效！
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Link
+          to="/booking"
+          className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2"
+        >
+          <span>立即預約試課</span>
+          <ArrowRight size={20} className="animate-bounce-light" />
+        </Link>
+      </div>
     </div>
-    <div className="mt-4 text-center">
-      <p className="text-lg font-semibold">點選即觀看實際教學影片</p>
-      <p className="text-blue-200">觀看我們的教學方法</p>
-    </div>
-  </div>
-  {/* 浮動元素 */}
-  <div className="absolute -top-4 -right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold animate-bounce">
-    預約體驗！
-  </div>
-</a>
-          </div>
-        </Container>
-      </section>
+  </Container>
+</section>
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
