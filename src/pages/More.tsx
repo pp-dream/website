@@ -165,7 +165,7 @@ const More: React.FC = () => {
       </section>
 
       {/* Courses Section */}
-      <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-gray-50">
         <Container>
           <div className="flex gap-6 overflow-x-auto pb-4">
   {courses.map((course, index) => (
@@ -200,13 +200,17 @@ const More: React.FC = () => {
           <p className="text-xs text-gray-600 mb-2">
             <strong>適合對象：</strong>{course.suitable}
           </p>
-        </div>
-      </div>
+                  </div>
+                        </div>
     </div>
-  ))}
+      ))}
 </div>
         </Container>
+        <div className="block text-center text-sm text-blue-700 mb-3 select-none">
+  👉 左右滑動看更多課程
+</div>
       </section>
+      
 
       {/* Facilities Section */}
       <section className="py-20 bg-white">
