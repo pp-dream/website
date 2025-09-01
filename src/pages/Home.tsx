@@ -26,14 +26,14 @@ const Home: React.FC = () => {
     {
       icon: <Clock className="w-8 h-8 text-blue-600" />,
       title: "彈性上課時間",
-      description: "配合您的時間安排，提供靈活的課程時段"
+      description: "【上課】、【陪打】皆配合您的時間安排，提供靈活的時段選擇"
     },
     {
       icon: <Trophy className="w-8 h-8 text-blue-600" />,
       title: "價值保證",
-      description: "優質的教學品質，讓您感受到物超所值"
+      description: "優質的教學及陪打品質，讓您感受到物超所值"
     }
-  ];
+      ];
 
   const testimonials = [
     {
@@ -93,8 +93,8 @@ const Home: React.FC = () => {
         第一步
       </h1>
       <p className="text-xl mb-8 text-blue-100">
-        專業桌球教練團隊，提供個人化教學菜單。
-        無論男女老少，初學者或進階選手，5-90歲我們都能助達符合您所期望的成效！
+        專業桌球教練團隊，提供個人化教學菜單及陪打服務。
+        無論男女老少，初學者或進階選手，5-90歲我們都能協助符合您所期望的成效！
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link
@@ -117,7 +117,7 @@ const Home: React.FC = () => {
               為什麼選擇我們？
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              我們提供最專業有成效的教學品質，讓每位學員都能以快樂的心用最少的時間感受差異
+              我們提供最專業及最好的品質，讓每位學員都能以快樂的心用最少的時間感受差異
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

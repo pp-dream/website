@@ -12,7 +12,7 @@ import Container from '../components/Container';
 const More: React.FC = () => {
   const courses = [
       {
-      title: "體驗課程/500元",
+      title: "體驗課程",
       duration: "單堂/50mins",
         sessions: "1堂",
       features: [
@@ -67,6 +67,20 @@ const More: React.FC = () => {
       suitable: "掌握初中階技巧想學習更高階技術或有志參加比賽的學員",
       color: "bg-purple-500"
     },
+     {
+      title: "教練陪打",
+      duration: "單次/1hr",
+      sessions: "客製化",
+      features: [
+        "質量穩定",
+        "靈活時間安排",
+        "相互切磋",
+        "以球會友",
+        "專業度品質高"
+      ],
+      suitable: "喜歡以球會友打打球，聊聊天的成人及孩童",
+      color: "bg-red-500" 
+    },
     {
       title: "團體課程",
       duration: "單堂/1.5hr",
@@ -81,7 +95,7 @@ const More: React.FC = () => {
       suitable: "喜歡與同儕朋友一同練習及玩樂的孩童",
       color: "bg-orange-500"
     }
-  ];
+      ];
 
   const facilities = [
     {
@@ -153,52 +167,44 @@ const More: React.FC = () => {
       {/* Courses Section */}
       <section className="py-20 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              課程方案
-            </h2>
-            <p className="text-xl text-gray-600">
-              多元化的課程選擇，滿足不同程度學員的需求
-            </p>
-          </div>
-
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 overflow-x-auto">
-            {courses.map((course, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className={`${course.color} text-white p-6`}>
-                  <h3 className="text-xl font-bold mb-2">{course.title}</h3>
-                                    <div className="text-sm opacity-90">{course.sessions}</div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center text-gray-600 mb-4">
-                    <Clock className="w-5 h-5 mr-2" />
-                    <span>{course.duration}</span>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">課程內容</h4>
-                    <ul className="space-y-2">
-                      {course.features.map((feature, i) => (
-                        <li key={i} className="flex items-center text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="border-t pt-4">
-                    <p className="text-sm text-gray-600 mb-4">
-                      <strong>適合對象：</strong>{course.suitable}
-                    </p>
-                    <button className="">
-                     </button>
-                  </div>
-                </div>
-              </div>
+          <div className="flex gap-6 overflow-x-auto pb-4">
+  {courses.map((course, index) => (
+    <div
+      key={index}
+      className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex-shrink-0"
+      style={{ width: 220, minWidth: 220, maxWidth: 220 }}
+    >
+      <div
+  className={`${course.title === "教練陪打" ? "bg-red-500 text-white" : course.color + " text-white"} p-4`}
+>
+  <h3 className="text-lg font-bold mb-1 tracking-wide">{course.title}</h3>
+  <div className="text-xs opacity-90">{course.sessions}</div>
+</div>
+      <div className="p-4">
+        <div className="flex items-center text-gray-600 mb-2">
+          <Clock className="w-4 h-4 mr-2" />
+          <span className="text-sm">{course.duration}</span>
+        </div>
+        <div className="mb-4">
+          <h4 className="font-semibold text-gray-900 mb-2 text-base">課程內容</h4>
+          <ul className="space-y-1">
+            {course.features.map((feature, i) => (
+              <li key={i} className="flex items-center text-gray-700 text-sm">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                <span>{feature}</span>
+              </li>
             ))}
-          </div>
+          </ul>
+        </div>
+        <div className="border-t pt-2">
+          <p className="text-xs text-gray-600 mb-2">
+            <strong>適合對象：</strong>{course.suitable}
+          </p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
         </Container>
       </section>
 

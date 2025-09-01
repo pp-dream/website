@@ -33,6 +33,7 @@ const Booking: React.FC = () => {
   { value: 'advanced', label: '初階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
   { value: 'competition', label: '中階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
   { value: 'private', label: '高階課程', description: '4週4堂課，8週8堂課，16週16堂課' },
+  { value: 'private', label: '教練陪打', description: '1hr/500元' },
   { value: 'trial', label: '團體課程', description: '彈性安排' }
 ];
 
