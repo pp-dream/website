@@ -167,6 +167,9 @@ const More: React.FC = () => {
       {/* Courses Section */}
             <section className="py-20 bg-gray-50">
         <Container>
+          <div className="block text-center text-sm text-blue-700 mb-3 select-none">
+  👉 左右滑動看更多課程
+  </div>
           <div className="flex gap-6 overflow-x-auto pb-4">
   {courses.map((course, index) => (
     <div
@@ -206,10 +209,7 @@ const More: React.FC = () => {
       ))}
 </div>
         </Container>
-        <div className="block text-center text-sm text-blue-700 mb-3 select-none">
-  👉 左右滑動看更多課程
-</div>
-      </section>
+              </section>
       
 
       {/* Facilities Section */}
