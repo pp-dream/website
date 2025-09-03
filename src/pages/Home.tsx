@@ -93,8 +93,9 @@ const Home: React.FC = () => {
         第一步
       </h1>
       <p className="text-xl mb-8 text-blue-100">
-        專業桌球教練團隊，提供個人化教學菜單及陪打服務。
-        無論男女老少，初學者或進階選手，5-90歲我們都能協助符合您所期望的成效！
+        我們將提供您有熱情、有活力、有溫暖的專業桌球教練團隊，安排教練到府或您指定的地點授課，規劃個人化教學菜單及陪打服務。
+        <p className="text-xl mb-8 text-blue-100"></p>
+         無論男女老少，初學者或進階選手，5-90歲我們都能協助您達到所期望的成效！
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link
