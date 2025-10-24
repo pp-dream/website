@@ -29,7 +29,7 @@ const Header: React.FC = () => {
             <div className="bg-white text-blue-900 rounded-full p-2">
               <Medal size={24} />
             </div>
-            <span>玩童桌球家教</span>
+            <span>玩童｜桌球教練媒合平台</span>
           </Link>
 
           <nav

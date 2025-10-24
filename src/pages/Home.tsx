@@ -15,8 +15,8 @@ const Home: React.FC = () => {
   const features = [
     {
       icon: <Users className="w-8 h-8 text-blue-600" />,
-      title: "專業教練團隊",
-      description: "擁有豐富教學經驗的專業教練，提供個人化指導"
+      title: "品質可靠又安全",
+      description: "教練至指定場地授課，無場地可協助安排，【免接送】【下課即到家】家長也可陪同上課，安全有保障"
     },
     {
       icon: <Target className="w-8 h-8 text-blue-600" />,
@@ -93,9 +93,15 @@ const Home: React.FC = () => {
         第一步
       </h1>
       <p className="text-xl mb-8 text-blue-100">
-        我們將提供您有熱情、有活力、有溫暖的專業桌球教練團隊，安排教練到府或您指定的地點授課，規劃個人化教學菜單及陪打服務。
+        我們不是傳統球館，
+而是一個「把教練帶到你身邊」的行動桌球品牌。
+玩童乒乓擁有一支充滿熱情、活力與溫度的專業教練團隊，
+<p className="text-xl mb-0.1 text-blue-100"></p>
+可到府、到社區、或您熟悉的場地授課。
+【若您沒有場地，我們也能協助安排合適的地點】。
         <p className="text-xl mb-8 text-blue-100"></p>
-         無論男女老少，初學者或進階選手，5-90歲我們都能協助您達到所期望的成效！
+         我們為每位學員量身打造專屬訓練計畫與陪打課程。
+不論年齡、不論程度——只要您有興趣或者想進步，我們都在你身邊！
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link

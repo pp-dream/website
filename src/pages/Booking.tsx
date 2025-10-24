@@ -169,7 +169,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
-                    <p className="text-gray-600">s38030588@yahoo.com.tw</p>
+                    <p className="text-gray-600">jun3853170@gmail.com</p>
                   </div>
                 </div>
                 

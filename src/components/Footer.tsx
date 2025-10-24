@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <div className="bg-blue-600 text-white rounded-full p-2">
                 <Medal size={24} />
               </div>
-              <span>玩童桌球家教</span>
+              <span>玩童｜桌球教練媒合平台</span>
             </Link>
             <p className="text-gray-300 mb-4 max-w-md">
               專業桌球教學團隊，致力於提供最優質的桌球教學服務。
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={16} className="text-blue-400" />
-                <span className="text-gray-300">s38030588@yahoo.com.tw</span>
+                <span className="text-gray-300">jun3853170@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MessageCircleHeart size={16} className="text-blue-400" />
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
-              © 2025 玩童桌球家教. 版權所有.
+              © 2025 玩童｜桌球教練媒合平台. 版權所有.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0 gap-2">
                                  </div>
