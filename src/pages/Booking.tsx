@@ -283,25 +283,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 </select>
 
 
-                    {/* 選擇教練欄位 */}
-<label className="block text-sm font-medium text-gray-700 mb-1">
-  選擇教練 *
-</label>
-<select
-  name="coach"
-  value={formData.coach}
-  onChange={handleInputChange}
-  className="w-full p-3 rounded-lg border border-gray-300 mb-6"
-  required
->
-  <option value="">請選擇教練</option>
-  <option value="羅教練">羅教練-小羅教練</option>
-  <option value="顏教練">顏教練-大熊教練</option>
-  <option value="陳教練">陳教練-大黑教練</option>
-  <option value="柯教練">柯教練-小柯教練</option>
-  <option value="不指定">不指定</option>
-
-</select>
+                    
                   
                 </div>
 

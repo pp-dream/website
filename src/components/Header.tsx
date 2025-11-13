@@ -9,7 +9,6 @@ const Header: React.FC = () => {
 
   const navItems = [
     { path: "/", label: "首頁" },
-    { path: "/about", label: "師資陣容" },
     { path: "/more", label: "了解更多" },
     { path: "/booking", label: "點我預約" },
   ];
@@ -17,86 +16,102 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-lg sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-blue-900 to-blue-600 text-white shadow">
       <Container>
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link
-            to="/"
-            className="flex items-center space-x-3 text-lg sm:text-2xl font-bold"
-            style={{ fontFamily: '"LXGW WenKai Mono TC", monospace' }}
-          >
-            <div className="bg-white text-blue-900 rounded-full p-2">
+        {/* 上排：Logo / 中間選單 / 右邊 LINE + 漢堡 */}
+        <div className="flex justify-between items-center py-3">
+          {/* 左：Logo */}
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="bg-white text-blue-700 rounded-full p-2">
               <Medal size={24} />
             </div>
-            <span>玩童｜桌球教練媒合平台</span>
+
+            <span className="text-lg font-semibold">
+              玩童｜桌球教練媒合平台
+            </span>
           </Link>
 
+          {/* 中：桌機選單 */}
           <nav
-            className="hidden md:flex flex-1 justify-center"
-            style={{ fontFamily: '"LXGW WenKai Mono TC", monospace' }}
+            className="hidden md:flex items-center justify-center gap-10"
+            style={{ fontFamily: '"LXGW WenKai Mono TC", system-ui' }}
           >
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`flex-1 text-center text-xl font-bold hover:text-orange-400 transition-colors duration-200 ${
-                  isActive(item.path) ? "text-orange-400" : ""
-                }`}
+                className={`
+  px-4 py-2 text-lg text-white/90 hover:text-orange-300
+  transition-colors duration-200
+  ${isActive(item.path) ? "text-orange-400 font-semibold" : ""}
+`}
               >
                 {item.label}
               </Link>
             ))}
           </nav>
-          <div className="flex gap-3">
-            <div className="flex items-center">
-              <a
-                href="https://page.line.me/845qnobd?v=2"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2 text-xs sm:text-lg"
-              >
-                <Handshake size={16} />
-                <span>加入官方LINE</span>
-              </a>
-            </div>
 
-            {/* Mobile menu button */}
+          {/* 右：桌機 LINE 按鈕 + 手機漢堡 */}
+          <div className="flex items-center justify-end gap-3">
+            {/* 桌機 LINE */}
+            <a
+              href="https://line.me/R/ti/p/@845qnobd?oat_content=url&ts=09032151"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-orange-500 hover:bg-orange-600 text-sm font-semibold"
+            >
+              <Handshake size={16} />
+              <span>加入官方LINE</span>
+            </a>
+
+            {/* 手機：漢堡按鈕（Menu ↔ X） */}
             <button
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              type="button"
+              className="md:hidden inline-flex items-center justify-center p-2 rounded-md hover:bg-white/10"
+              onClick={() => setIsMenuOpen((prev) => !prev)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* 手機版展開選單 */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-blue-600">
-            <nav className="flex flex-col space-y-2">
-              {navItems.map((item) =>
-                item.path.startsWith("http") ? (
-                  <a
-                    href={item.path} // ✅ 使用 item.path 就能跟資料同步
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-2 rounded-md text-sm text-white hover:bg-blue-600"
-                  >
-                    {item.label}
-                  </a>
-                ) : (
-                  <Link
-                    to={item.path}
-                    key={item.path}
-                    className="px-3 py-2 rounded-md text-sm text-white hover:bg-blue-600"
-                  >
-                    {item.label}
-                  </Link>
-                )
-              )}
-            </nav>
-          </div>
+          <nav
+            className="md:hidden border-t border-blue-700 bg-blue-900"
+            style={{ fontFamily: '"LXGW WenKai Mono TC", system-ui' }}
+          >
+            <div className="flex flex-col px-4 py-3 space-y-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`
+                    w-full px-3 py-2 rounded-md text-base
+                    ${
+                      isActive(item.path)
+                        ? "bg-blue-700 text-orange-300 font-semibold"
+                        : "text-white/90 hover:bg-blue-800"
+                    }
+                  `}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+              {/* 手機版 LINE 按鈕 */}
+              <a
+                href="https://line.me/R/ti/p/@845qnobd?oat_content=url&ts=09032151"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-sm font-semibold"
+              >
+                <Handshake size={16} />
+                <span>加入官方LINE</span>
+              </a>
+            </div>
+          </nav>
         )}
       </Container>
     </header>
